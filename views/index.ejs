@@ -1,0 +1,37 @@
+<%- include('./partials/header.ejs') %>
+
+<%- include('./partials/navbar.ejs') %>
+
+<link rel="stylesheet" href="/css/indexStyle.css">
+<div class="container">
+    <h2>Lista de Pagamentos</h2>
+
+    <div class="card-container">
+    <% payments.forEach(pay => { %>
+        <div class="card">
+            <div class="card-header">
+                <h4><%= pay.title %></h4>
+            </div>
+            <div class="card-body">
+                <div>ID: <%= pay.id %></div>
+                <div>Valor: <%= pay.value %></div>
+                <div>Data do pagamento: <%= pay.date_payment %></div>
+                <div>Imposto: <%= pay.tax %></div>
+                <div>Comentários: <%= pay.comments %></div>
+            </div>
+
+            <div class="card-footer">
+                <a href="/edit-payment/<%=pay.id%>" class="btn btn-warning">Editar</a>
+                <form action="/delete-payment" method="post" style="display: inline-block;">
+                    <input type="hidden" name="id" id="id" value="<%= pay.id %>">
+                    <button class="btn btn-danger">Deletar</button>
+                </form>
+            </div>
+        </div>
+    <% }) %>
+    </div>
+</div>
+
+
+
+<%- include('./partials/footer.ejs') %>

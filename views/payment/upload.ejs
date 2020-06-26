@@ -1,0 +1,34 @@
+<%- include('../partials/header.ejs') %>
+
+<%- include('../partials/navbar.ejs') %>
+
+<div class="container">
+    <div class="card mt-3">
+        <div class="card-header">
+            <h2>Upload de planilhas de pagamento</h2>
+        </div>
+        <div class="card-body">
+
+            <form action="/upload-spreadsheets" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="title">Arquivo</label>
+                    <input 
+                        type="file" 
+                        name="file" 
+                        id="file" 
+                        class="form-control"
+                    />
+                </div>                
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-warning">Salvar planilha</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,33 @@
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card-header {
+    background-color: #f08d66;
+    color: #fff;
+}
+
+.card {
+    display: inline-block;
+    width: 480px;
+    background-color: #c0ced4;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.541);
+    margin-bottom: 20px;
+}
+
+.card-body {
+    font-size: 18px;
+    height: 230px;
+}
+
+.btn {
+    width: 200px;
+    margin: 0px 5px;
+}
+
+.card-footer {
+    background-color: #bac8ce;
+}
